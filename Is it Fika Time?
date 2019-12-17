@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Er det tirsdag eller onsdag mellem 15 og 16?</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script>
+function isItOnsTir() {
+    var d = new Date();
+    console.log(d.getHours());
+    var elem = document.getElementById("answer");
+    if ((d.getDay() == 2 || d.getDay() == 3) && d.getHours() >= 15 && d.getHours() < 16) {
+        elem.innerHTML = "Ja";
+        elem.className = "yes";
+    } else {
+        elem.innerHTML = "Nej";
+        elem.className = "no";
+    }
+}
+</script>
+</head>
+<body onload="isItOnsTir();">
+
+<h1>Er det tirsdag eller onsdag mellem 15 og 16?</h1>
+
+<h2 id="answer" class="no">Nej</h2>
+
+</body></html>
